@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岩崎総合不動産様 ご提案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#231f1c; --ink-soft:#6d635b; --ink-faint:#9a9089;
+  --paper:#fbf9f5; --card:#fff; --line:#e7ded1;
+  --navy:#1f3b52; --navy-dark:#132738;
+  --clay:#9c5b3b; --clay-light:#f3e6de;
+  --gold:#b08a34; --gold-light:#f0e4c4;
+  --shadow:0 2px 12px rgba(35,31,28,.06);
+  --shadow-lg:0 16px 44px rgba(19,39,56,.15);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.95;letter-spacing:.012em;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:"Noto Serif JP",serif;letter-spacing:.02em;}
+.wrap{max-width:920px;margin:0 auto;padding:0 22px;}
+
+/* hero */
+.hero{background:linear-gradient(165deg,var(--navy-dark),var(--navy) 60%,#2c5573);color:#fff;position:relative;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 350px at 86% -6%,rgba(240,228,196,.19),transparent 62%);}
+.hero .wrap{position:relative;padding:70px 22px 62px;}
+.eyebrow{display:inline-block;font-size:11.5px;letter-spacing:.19em;font-weight:700;color:var(--gold-light);border:1px solid rgba(240,228,196,.44);padding:6px 16px;border-radius:999px;background:rgba(0,0,0,.16);}
+.hero h1{font-size:clamp(25px,3.9vw,36px);font-weight:900;margin:22px 0 16px;line-height:1.55;}
+.hero p.lead{font-size:14.8px;color:rgba(255,255,255,.85);max-width:56ch;margin:0;}
+.signer{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:13.2px;color:rgba(255,255,255,.8);}
+.signer b{color:#fff;font-size:14.5px;}
+
+/* toc */
+nav.toc{position:sticky;top:0;z-index:50;background:rgba(251,249,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);overflow-x:auto;}
+.toc-inner{max-width:920px;margin:0 auto;display:flex;gap:2px;padding:0 20px;}
+.toc a{white-space:nowrap;padding:14px 13px;font-size:12.6px;font-weight:700;color:var(--ink-soft);text-decoration:none;border-bottom:3px solid transparent;}
+.toc a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+
+main{padding:52px 0 96px;}
+.sec{margin-bottom:64px;scroll-margin-top:62px;}
+.sec-head{display:flex;align-items:baseline;gap:13px;margin-bottom:16px;}
+.sec-num{font-family:"Noto Serif JP",serif;font-size:12px;font-weight:900;color:#fff;background:var(--navy);border-radius:8px;padding:4px 12px;white-space:nowrap;}
+.sec h2{font-size:21.5px;font-weight:900;margin:0;color:var(--navy-dark);line-height:1.5;}
+.sec-sub{color:var(--ink-soft);font-size:13.6px;margin:0 0 24px;max-width:68ch;}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow);}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px;}
+
+/* split callout */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:720px){.split{grid-template-columns:1fr;}}
+.split-card{border-radius:15px;padding:24px 24px;position:relative;}
+.split-a{background:linear-gradient(155deg,var(--clay),#7d4529);color:#fff;box-shadow:var(--shadow-lg);}
+.split-b{background:var(--card);border:1.5px solid var(--navy);color:var(--ink);}
+.split-card .tag{display:inline-block;font-size:11px;font-weight:900;letter-spacing:.12em;padding:4px 12px;border-radius:999px;margin-bottom:12px;}
+.split-a .tag{background:rgba(255,255,255,.22);color:#fff;}
+.split-b .tag{background:var(--navy);color:#fff;}
+.split-card h3{font-size:17px;margin:0 0 10px;}
+.split-a h3{color:#fff;}
+.split-b h3{color:var(--navy-dark);}
+.split-card p{margin:0;font-size:13.4px;line-height:1.85;}
+.split-a p{color:rgba(255,255,255,.9);}
+.split-b p{color:var(--ink-soft);}
+
+/* reason list */
+.reasons{display:grid;gap:12px;}
+.reason{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:18px 22px;box-shadow:var(--shadow);}
+.reason h4{margin:0 0 7px;font-size:14.8px;color:var(--navy-dark);font-family:"Noto Sans JP";font-weight:700;}
+.reason p{margin:0;font-size:13.4px;color:var(--ink-soft);line-height:1.85;}
+.reason p em{font-style:normal;color:var(--clay);font-weight:700;}
+
+/* mock frame */
+.mock-frame{border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:var(--shadow-lg);background:#fff;}
+.mock-frame .bar{background:var(--navy-dark);color:#fff;font-size:11.5px;padding:9px 15px;display:flex;align-items:center;gap:7px;}
+.mock-frame .bar i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.32);display:inline-block;}
+.mock-frame .bar span{margin-left:8px;color:rgba(255,255,255,.78);}
+iframe{width:100%;height:600px;border:none;display:block;}
+.mock-link{text-align:center;margin-top:16px;}
+.mock-link a{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 28px;border-radius:999px;box-shadow:var(--shadow);}
+
+/* service */
+.svc{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:26px 26px;box-shadow:var(--shadow);margin-bottom:16px;}
+.svc-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.svc-code{font-family:"Noto Serif JP",serif;font-size:11.5px;font-weight:900;letter-spacing:.14em;color:#fff;background:var(--clay);padding:4px 12px;border-radius:7px;}
+.svc h3{margin:0;font-size:17.5px;color:var(--navy-dark);}
+.svc>p.desc{font-size:13.7px;color:var(--ink-soft);margin:0 0 18px;line-height:1.88;}
+.svc-detail{border-top:1px solid var(--line);padding-top:16px;}
+.svc-detail dt{font-size:11.5px;font-weight:900;letter-spacing:.06em;color:var(--clay);margin-top:14px;}
+.svc-detail dt:first-child{margin-top:0;}
+.svc-detail dd{margin:5px 0 0;font-size:13.2px;color:var(--ink);line-height:1.85;}
+
+/* table */
+.table-wrap{overflow-x:auto;border-radius:14px;box-shadow:var(--shadow);border:1px solid var(--line);}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:13.4px;}
+thead th{background:var(--navy-dark);color:#fff;text-align:left;padding:13px 15px;font-weight:700;font-size:12px;letter-spacing:.03em;}
+tbody td{padding:13px 15px;border-bottom:1px solid var(--line);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:nth-child(even){background:rgba(31,59,82,.02);}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 11px;border-radius:7px;background:var(--gold-light);color:#6b5310;white-space:nowrap;}
+.pill-free{background:#dcecdc;color:#2c5c2c;font-weight:900;}
+.recommend{position:relative;}
+.recommend td{background:#fff9ee!important;}
+.rec-tag{display:inline-block;font-size:10.5px;font-weight:900;background:var(--clay);color:#fff;padding:2px 8px;border-radius:5px;margin-left:7px;}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(198px,1fr));gap:16px;}
+.fstep{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:25px 20px 20px;position:relative;box-shadow:var(--shadow);}
+.fstep .n{position:absolute;top:-14px;left:20px;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif JP";font-weight:900;font-size:13.5px;}
+.fstep h4{margin:6px 0 7px;font-size:14.5px;color:var(--navy-dark);font-family:"Noto Sans JP";font-weight:700;}
+.fstep p{margin:0;font-size:12.8px;color:var(--ink-soft);line-height:1.82;}
+.fstep .cost{display:inline-block;margin-top:10px;font-size:11px;font-weight:900;padding:2px 10px;border-radius:6px;background:#dcecdc;color:#2c5c2c;}
+
+/* track record */
+.tr-band{background:var(--navy-dark);color:#fff;border-radius:16px;padding:30px 30px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;}
+.tr-band::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 280px at 88% 0%,rgba(240,228,196,.14),transparent 62%);}
+.tr-inner{position:relative;display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;}
+@media(max-width:620px){.tr-inner{grid-template-columns:1fr;gap:18px;}}
+.tr-num{font-family:"Noto Serif JP",serif;line-height:1.2;}
+.tr-num .from{font-size:15px;color:rgba(255,255,255,.55);text-decoration:line-through;}
+.tr-num .to{font-size:44px;font-weight:900;color:var(--gold-light);}
+.tr-num .unit{font-size:16px;font-weight:700;color:var(--gold-light);}
+.tr-text h4{margin:0 0 8px;font-size:16px;color:#fff;}
+.tr-text p{margin:0;font-size:13.3px;color:rgba(255,255,255,.8);line-height:1.85;}
+
+/* qa */
+.qa{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:19px 23px;box-shadow:var(--shadow);margin-bottom:12px;}
+.qa .q{font-weight:700;color:var(--navy-dark);font-size:14.2px;margin:0 0 9px;}
+.qa .q::before{content:"Q. ";color:var(--clay);font-weight:900;}
+.qa .a{font-size:13.4px;color:var(--ink-soft);margin:0;line-height:1.88;}
+.qa .a::before{content:"A. ";color:var(--navy);font-weight:900;}
+
+.note-box{background:#fff9ee;border:1px solid var(--gold-light);border-radius:14px;padding:22px 25px;font-size:13.5px;color:#5c4a24;box-shadow:var(--shadow);line-height:1.9;}
+.note-box h4{margin:0 0 11px;color:var(--navy-dark);font-size:14.8px;font-family:"Noto Sans JP";font-weight:700;}
+.note-box ol,.note-box ul{margin:0;padding-left:21px;}
+.note-box li{margin-bottom:8px;}
+.note-box li:last-child{margin-bottom:0;}
+
+.closing{background:linear-gradient(160deg,var(--clay),#7d4529);color:#fff;border-radius:16px;padding:34px 32px;text-align:center;box-shadow:var(--shadow-lg);}
+.closing h3{font-size:20px;margin:0 0 14px;color:#fff;line-height:1.6;}
+.closing p{font-size:14px;color:rgba(255,255,255,.88);margin:0 auto;max-width:50ch;}
+
+footer{text-align:center;padding:32px 22px;color:var(--ink-faint);font-size:12px;border-top:1px solid var(--line);}
+@media(max-width:640px){nav.toc{position:static;}}
+/* ===== luxury layer ===== */
+:root{
+  --ink:#1b1f24; --ink-soft:#5a5750; --ink-faint:#9a958a;
+  --paper:#f6f3ec; --card:#fffdf8; --line:#e2dccd;
+  --navy:#16222e; --navy-dark:#0c141c;
+  --clay:#9a7b45; --clay-light:#f1e9d8;
+  --gold:#b39458; --gold-light:#dcc89c;
+  --shadow:none; --shadow-lg:0 30px 60px -30px rgba(12,20,28,.35);
+}
+body{font-family:"Noto Sans JP",sans-serif;font-weight:400;letter-spacing:.04em;line-height:2.05;}
+h1,h2,h3,.sec-num,.svc-code,.tr-num,.fstep .n{font-family:"Shippori Mincho","Noto Serif JP",serif;}
+.wrap{max-width:880px;}
+
+.hero{background:var(--navy-dark);}
+.hero::before{background:
+  radial-gradient(900px 420px at 85% -10%,rgba(179,148,88,.16),transparent 60%),
+  linear-gradient(180deg,transparent 0,transparent calc(100% - 1px),rgba(179,148,88,.5) calc(100% - 1px));}
+.hero .wrap{padding:110px 22px 96px;}
+.eyebrow{border:none;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);border-radius:0;background:none;padding:7px 2px;letter-spacing:.32em;font-weight:500;color:var(--gold-light);font-size:11px;}
+.hero h1{font-weight:600;font-size:clamp(26px,3.7vw,38px);letter-spacing:.08em;line-height:1.75;margin:40px 0 26px;}
+.hero p.lead{font-weight:300;color:rgba(255,255,255,.78);line-height:2.2;}
+.signer{margin-top:52px;padding-top:26px;border-top:1px solid rgba(179,148,88,.35);font-weight:300;letter-spacing:.1em;}
+.signer b{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;color:var(--gold-light);letter-spacing:.2em;}
+
+nav.toc{background:rgba(246,243,236,.96);border-bottom:1px solid var(--line);}
+.toc a{font-weight:500;letter-spacing:.12em;font-size:11.8px;}
+.toc a:hover{color:var(--navy-dark);border-bottom-color:var(--gold);}
+
+main{padding:90px 0 120px;}
+.sec{margin-bottom:110px;}
+.sec-head{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--line);position:relative;}
+.sec-head::after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:1px;background:var(--gold);}
+.sec-num{background:none;color:var(--gold);padding:0;border-radius:0;font-family:"Cormorant Garamond","Shippori Mincho",serif;font-style:italic;font-weight:500;font-size:15px;letter-spacing:.2em;font-variant-numeric:lining-nums;}
+.tr-num .to{font-variant-numeric:lining-nums;}
+.sec h2{font-weight:600;font-size:24px;letter-spacing:.1em;color:var(--navy-dark);}
+.sec-sub{font-weight:300;line-height:2.15;}
+
+.card,.reason,.svc,.qa,.fstep,.note-box{border-radius:3px;box-shadow:none;background:var(--card);border:1px solid var(--line);}
+.reason{border-left:1px solid var(--line);padding:24px 28px;position:relative;}
+.reason::before{content:"";position:absolute;left:-1px;top:24px;bottom:24px;width:2px;background:var(--gold);}
+.reason h4,.fstep h4,.note-box h4,.qa .q{font-family:"Shippori Mincho",serif;font-weight:700;letter-spacing:.06em;}
+.reason p em{color:var(--clay);font-weight:500;background:linear-gradient(transparent 70%,rgba(220,200,156,.45) 70%);}
+
+.split-card{border-radius:3px;padding:32px 30px;}
+.split-a{background:var(--navy-dark);box-shadow:var(--shadow-lg);border:1px solid rgba(179,148,88,.4);}
+.split-a .tag{background:none;border:1px solid var(--gold);color:var(--gold-light);border-radius:0;}
+.split-a h3{color:var(--gold-light);}
+.split-b{border:1px solid var(--line);background:var(--card);}
+.split-b .tag{background:none;border:1px solid var(--navy);color:var(--navy);border-radius:0;}
+.split-card .tag{letter-spacing:.24em;font-weight:500;}
+
+.mock-frame{border-radius:3px;border:1px solid var(--gold-light);}
+.mock-frame .bar{background:var(--navy-dark);letter-spacing:.1em;}
+.mock-link a{border-radius:0;background:none;color:var(--navy-dark);border:1px solid var(--navy-dark);letter-spacing:.18em;font-weight:500;padding:13px 34px;}
+.mock-link a:hover{background:var(--navy-dark);color:var(--gold-light);}
+
+.svc{padding:34px 34px;margin-bottom:20px;}
+.svc-code{background:none;color:var(--gold);padding:0;border-radius:0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:14px;letter-spacing:.22em;border-bottom:1px solid var(--gold);}
+.svc h3{font-weight:600;letter-spacing:.08em;}
+.svc-detail dt{color:var(--gold);letter-spacing:.2em;font-weight:500;}
+.svc>p.desc,.svc-detail dd{font-weight:300;}
+
+.table-wrap{border-radius:3px;box-shadow:none;border:1px solid var(--line);}
+thead th{background:var(--navy-dark);color:var(--gold-light);font-weight:500;letter-spacing:.18em;white-space:nowrap;}
+tbody td{font-weight:300;padding:18px 16px;}
+tbody td strong{font-family:"Shippori Mincho",serif;font-weight:700;font-size:16px;letter-spacing:.06em;color:var(--navy-dark);}
+.pill{background:none;border:1px solid var(--gold);color:var(--clay);border-radius:0;letter-spacing:.14em;font-weight:500;}
+.pill-free{border-color:var(--line);color:var(--ink-soft);}
+.recommend td{background:#f7f0e0!important;}
+.rec-tag{background:var(--navy-dark);color:var(--gold-light);border-radius:0;letter-spacing:.18em;font-weight:500;}
+
+.fstep .n{background:var(--card);color:var(--gold);border:1px solid var(--gold);font-weight:600;}
+.fstep .cost{background:none;border:1px solid var(--line);color:var(--ink-soft);border-radius:0;font-weight:500;letter-spacing:.1em;}
+
+.tr-band{border-radius:3px;border:1px solid rgba(179,148,88,.4);padding:40px 38px;}
+.tr-num .to{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:68px;color:var(--gold-light);}
+.tr-text h4{font-family:"Shippori Mincho",serif;font-weight:600;letter-spacing:.06em;}
+.tr-text p{font-weight:300;}
+
+.qa{padding:24px 28px;}
+.qa .q::before{color:var(--gold);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;}
+.qa .a{font-weight:300;}
+.qa .a::before{color:var(--navy);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:17px;}
+
+.note-box{background:#faf5ea;border:1px solid var(--gold-light);color:#4d4536;font-weight:300;}
+
+.closing{background:var(--navy-dark);border-radius:3px;border:1px solid rgba(179,148,88,.45);padding:52px 40px;position:relative;}
+.closing::before,.closing::after{content:"";position:absolute;left:50%;width:40px;height:1px;background:var(--gold);transform:translateX(-50%);}
+.closing::before{top:24px;}.closing::after{bottom:24px;}
+.closing h3{color:var(--gold-light);font-weight:600;letter-spacing:.1em;line-height:1.9;}
+.closing p{font-weight:300;}
+
+footer{letter-spacing:.14em;font-weight:300;border-top:1px solid var(--gold-light);}
+
+.print-only{display:none;}
+@media print{
+  nav.toc,.mock-frame,.mock-link{display:none!important;}
+  .print-only{display:block;}
+  .mock-print{border:1.5px dashed var(--navy);border-radius:12px;padding:18px 22px;font-weight:700;color:var(--navy-dark);background:#f4f7fa;}
+  .svc,.reason,.qa,.fstep,.card,.tr-band,.closing,.split-card{break-inside:avoid;}
+  .sec-head{break-inside:avoid;break-after:avoid;}
+  .sec-sub{break-before:avoid;}
+  body{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">岩崎総合不動産 代表 岩崎俊輔 様 ・ 個別ご提案 ・ 2026年9月</span>
+    <h1>「相続した実家をどうするか」で<br>検索した方が、最初に見つける会社に。</h1>
+    <p class="lead">御社の空き家管理・相続相談という強みを、まだ御社を知らない方にも届く形にするご提案です。実際にお客様へ公開できるページを一枚、先に作成いたしました。制作費はいただきません。</p>
+    <div class="signer">
+      ご提案者<br>
+      <b>桂</b>　／　学校法人 マーケティングリーダー<br>
+      Webサイト設計・マーケティング運用・業務のAI活用支援
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#s1">2つの成果物</a>
+    <a href="#s2">ページの設計意図</a>
+    <a href="#s3">実物をご覧ください</a>
+    <a href="#s4">ご提供サービス</a>
+    <a href="#s45">ご契約後の関わり方</a>
+    <a href="#s5">料金</a>
+    <a href="#s6">進め方</a>
+    <a href="#s7">実績</a>
+    <a href="#s8">ご質問</a>
+    <a href="#s9">次のステップ</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<!-- ===== S1 ===== -->
+<section class="sec" id="s1">
+  <div class="sec-head"><span class="sec-num">Prologue</span><h2>お送りしたものは、2つあります</h2></div>
+  <p class="sec-sub">混同を避けるため、先に整理させてください。一方は「御社がお客様に公開するもの」、もう一方は「私がご提供する業務の説明」です。</p>
+  <div class="split">
+    <div class="split-card split-a">
+      <span class="tag">成果物</span>
+      <h3>① 御社のお客様向けページ</h3>
+      <p>相続・空き家でお困りの方が読んで、御社に相談したくなるためのページです。<strong>これが今回お渡しするものの本体</strong>であり、御社がそのまま公開してお使いいただけます。すでに完成しています。</p>
+    </div>
+    <div class="split-card split-b">
+      <span class="tag">この資料</span>
+      <h3>② 私のサービス説明</h3>
+      <p>①をどういう考えで設計したか、そして継続してご一緒する場合に何をお引き受けできるかをまとめたものです。判断の材料としてご覧ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S2 ===== -->
+<section class="sec" id="s2">
+  <div class="sec-head"><span class="sec-num">Chapter 01</span><h2>作成したページの設計意図</h2></div>
+  <p class="sec-sub">見た目を整えたのではありません。「相談されない理由」を一つずつ取り除く目的で構成しています。以下がその設計根拠です。</p>
+  <div class="reasons">
+    <div class="reason">
+      <h4>入口を「売りたい人」ではなく「決めていない人」に広げた</h4>
+      <p>不動産の相談で最も多いのは<em>「売ると決めたわけではないが、どうしたらいいか分からない」</em>層です。ところが多くの不動産会社のページは「売却査定はこちら」から始まるため、この層が自分は対象外だと感じて離脱します。今回のページは冒頭を「決められないまま時間だけが過ぎていませんか」とし、最も人数の多い層を正面から受け止める設計にしました。</p>
+    </div>
+    <div class="reason">
+      <h4>相談をためらう最大の理由「費用」を、先に潰した</h4>
+      <p>相談を止めている本当の理由は<em>「相談したら費用を請求されるのでは」「売らされるのでは」</em>という不安です。そこでページ冒頭・流れ・費用の3箇所で「初回相談は無料」「その場での契約は求めない」を明示しました。費用の項目を隠さず独立したセクションにしているのは、隠すほど不安が増すためです。</p>
+    </div>
+    <div class="reason">
+      <h4>「今すぐ動く理由」を、煽らずに提示した</h4>
+      <p>空き家は放置しても日々の実害が出にくいため、相談が先送りされ続けます。そこで固定資産税の特例・売却時の控除の期限・建物の劣化という<em>制度と物理の両面で「時間が不利に働く」構造</em>を数字で示しました。ただし恐怖で動かす書き方は信頼を損なうため、直後に「いきなり売却はお勧めしません」と置いて緩和しています。</p>
+    </div>
+    <div class="reason">
+      <h4>連絡手段をLINEに寄せた</h4>
+      <p>相続・空き家の相談は<em>電話をかけるには気が重く、かつ平日昼間に電話できない</em>方が多い領域です。御社はすでに公式LINEをお持ちですので、それを主導線に据えました。ページ上部・中間・下部・スマートフォン下部固定バーの4箇所から常に到達できます。</p>
+    </div>
+    <div class="reason">
+      <h4>親族間で共有される前提で作った</h4>
+      <p>相続の判断は本人一人では決まらず、<em>兄弟・親族に転送されて検討されます</em>。そのため「ご家族でのご検討」を流れの正式な1ステップとして組み込み、転送されて初めて読む人にも通じるよう、専門用語を避けた記述にしています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S3 ===== -->
+<section class="sec" id="s3">
+  <div class="sec-head"><span class="sec-num">Chapter 02</span><h2>実物をご覧ください</h2></div>
+  <p class="sec-sub">下の枠内が、御社がそのまま公開できる状態のページです。所在地・電話番号・免許番号・営業時間は御社公式サイトの掲載情報を反映済みです。配色は御社サイトの温かみのある色合い（木目・橙・緑）に合わせています。</p>
+  <div class="mock-frame">
+    <div class="bar"><i></i><i></i><i></i><span>岩崎総合不動産 様 ／ 相続・空き家相談ページ</span></div>
+    <iframe src="iwasaki_mock.html" title="岩崎総合不動産様 お客様向けページ" loading="lazy"></iframe>
+  </div>
+  <div class="mock-link"><a href="iwasaki_mock.html" target="_blank" rel="noopener">別ウィンドウで大きく見る</a></div>
+  <div class="print-only mock-print">お客様向けページは、メール本文に記載のURLからスマートフォン・パソコンでご覧いただけます。</div>
+  <div class="note-box" style="margin-top:22px;">
+    <h4>ご確認いただきたい点</h4>
+    <ul>
+      <li>本ページは、URLを知っている方だけが閲覧でき、検索結果には表示されない設定です。御社のご許可なく一般に告知・公開することはございません。</li>
+      <li>写真は使用しておりません。文字とデザインのみで構成しているため、御社の写真をご用意いただく前の段階でも公開可能です。写真をご提供いただければ、より訴求力の高い形に差し替えます。</li>
+      <li>ご不要な場合は、その旨お知らせいただければ速やかに削除いたします。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== S4 ===== -->
+<section class="sec" id="s4">
+  <div class="sec-head"><span class="sec-num">Chapter 03</span><h2>ご提供できる3つの業務</h2></div>
+  <p class="sec-sub">すべて初期費用をいただかず、実際にお使いいただく段階からの月額制です。①のみのご利用でも構いません。</p>
+
+  <div class="svc">
+    <div class="svc-top"><span class="svc-code">SERVICE W</span><h3>Webサイトの設計・制作・運用</h3></div>
+    <p class="desc">「きれいなサイト」ではなく「相談が届くサイト」を目的に設計します。今回お送りしたページと同じ考え方で、相続・空き家・売買・賃貸それぞれの入口を分けて制作します。静的HTML＋Cloudflare Pages配信を採用しており、表示が速く、改ざんやウイルス感染のリスクが構造的に低い方式です。</p>
+    <dl class="svc-detail">
+      <dt>制作範囲</dt>
+      <dd>トップページ／相続相談ページ／空き家管理ページ／売買・賃貸ページ／会社概要／お問い合わせフォーム（すべてスマートフォン最適化済み）</dd>
+      <dt>契約後の継続業務</dt>
+      <dd>毎月の更新（事例・お知らせの追加）、ページの増設、文言の改善、アクセス状況のご報告</dd>
+      <dt>この業務が向いている状況</dt>
+      <dd>お問い合わせの入口を増やしたい／今のページが相談につながっている実感が薄い／スマートフォンからの見え方に不安がある</dd>
+    </dl>
+  </div>
+
+  <div class="svc">
+    <div class="svc-top"><span class="svc-code">SERVICE M</span><h3>マーケティング運用（LINE・Instagram）</h3></div>
+    <p class="desc">サイトは「探している人」にしか届きません。一方で空き家・相続は「まだ困っていると自覚していない段階」の方が大半です。その層に定期的に触れ続け、必要になった瞬間に御社を思い出していただくための継続発信を担当します。</p>
+    <dl class="svc-detail">
+      <dt>業務内容</dt>
+      <dd>公式LINEの相談メニュー設計／Instagramの投稿企画・制作・投稿（月4本）／実際にあったご相談事例の記事化／月次の反応レポート</dd>
+      <dt>狙う効果</dt>
+      <dd>「空き家のことなら岩崎さん」という第一想起の獲得。広告と異なり、停止しても蓄積が残る形式です</dd>
+      <dt>この業務が向いている状況</dt>
+      <dd>LINEを開設したが活用しきれていない／発信したいが手が回らない／紹介・指名での相談を増やしたい</dd>
+    </dl>
+  </div>
+
+  <div class="svc">
+    <div class="svc-top"><span class="svc-code">SERVICE AI</span><h3>お問い合わせ対応のAI活用支援</h3></div>
+    <p class="desc">LINE・フォームに届いた初回相談を、AIが要点整理して担当者様に通知する仕組みを構築します。「所在地・築年数・相続の進行状況・ご相談の種別」といった、折り返しに必要な情報が先に揃うため、一度の電話で話が進みます。夜間・休業日に届いた相談も取りこぼしません。</p>
+    <dl class="svc-detail">
+      <dt>構築内容</dt>
+      <dd>LINEでの一次ヒアリングの設計／相談内容の自動要約と担当者への通知／相談履歴の記録と一覧化</dd>
+      <dt>前提</dt>
+      <dd>学校法人向けに構築・運用している同種の仕組み（LINE連携・自動処理・記録の自動蓄積）を、不動産業務向けに移植する形でご提供します</dd>
+      <dt>この業務が向いている状況</dt>
+      <dd>折り返しの電話が何度も往復している／営業時間外の相談を拾えていない／誰がどの相談を持っているか把握しづらい</dd>
+    </dl>
+  </div>
+
+  <div class="note-box">
+    <h4>お引き受けできない業務</h4>
+    <p style="margin:0;">ドメインの取得・移管、SSL証明書の設定、サーバーの保守、既存のWordPressサイトの改修は専門外のため対応いたしかねます。気づいた点があればお伝えしますが、作業としてはお引き受けいたしません。できないことを先にお伝えするのが誠実だと考えております。</p>
+  </div>
+</section>
+
+<!-- ===== S4.5 ===== -->
+<section class="sec" id="s45">
+  <div class="sec-head"><span class="sec-num">Chapter 04</span><h2>ご契約後の関わり方</h2></div>
+  <p class="sec-sub">作って納品したら終わり、という関わり方はいたしません。公開した日が始まりで、そこから御社と何度も相談を重ね、手を入れ続けて「本当に相談が届くサイトとLINE」に育てていきます。</p>
+  <div class="reasons">
+    <div class="reason">
+      <h4>毎月、必ず顔を合わせて振り返ります</h4>
+      <p>月に一度、御社にお伺いするかオンラインで、<em>「どんな相談が来たか」「どこで離脱されたか」「現場で何が起きているか」</em>を一緒に確認します。数字だけでなく、日々お客様と接している御社の実感をいちばんの材料にします。</p>
+    </div>
+    <div class="reason">
+      <h4>改善は「提案して終わり」ではなく、その場で直します</h4>
+      <p>振り返りで見つかった課題は、次の打ち合わせまでに<em>文言・構成・導線を実際に修正</em>して反映します。「ここの言い回しが現場の感覚と違う」といった小さなご指摘こそ、何度でもいただきたい点です。</p>
+    </div>
+    <div class="reason">
+      <h4>公式LINEは、配信の一通まで一緒に作ります</h4>
+      <p>リッチメニューの構成、自動応答の文面、季節ごとの配信内容（相続が話題になるお盆・年末年始など）を、<em>御社の言葉づかいに合うまで相談しながら</em>作ります。お客様から届いた質問は、次の配信やFAQの改善にそのまま還元します。</p>
+    </div>
+    <div class="reason">
+      <h4>急ぎのご相談には、月1回を待たずに対応します</h4>
+      <p>新しい物件の掲載、臨時休業のお知らせ、反響の多い投稿への対応など、<em>日々の「これを載せたい」「ここを直したい」</em>はLINEやお電話でいつでもご連絡ください。</p>
+    </div>
+  </div>
+  <div class="closing" style="margin-top:20px;padding:26px 28px;">
+    <h3 style="font-size:17px;margin-bottom:8px;">私が約束するのは「完成品」ではなく、「改善し続けること」です。</h3>
+    <p style="max-width:58ch;">1年間、御社の一員のつもりで、相談と改善を繰り返します。</p>
+  </div>
+</section>
+
+<!-- ===== S5 ===== -->
+<section class="sec" id="s5">
+  <div class="sec-head"><span class="sec-num">Chapter 05</span><h2>料金</h2></div>
+  <p class="sec-sub">制作費・初期費用は0円です。すでにお送りしたページの制作費も請求いたしません。実際にお使いいただき、続ける価値があるとご判断いただいた場合にのみ、月額のご契約となります。</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>プラン</th><th>含まれる業務</th><th>初期費用</th><th>月額（税別）</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill">ライト</span></td>
+          <td>W（サイトの公開・毎月の更新）</td>
+          <td><span class="pill pill-free">0円</span></td>
+          <td><strong>3万円</strong></td>
+        </tr>
+        <tr>
+          <td><span class="pill">スタンダード</span></td>
+          <td>W ＋ AI（お問い合わせの一次対応・要約通知・履歴記録）</td>
+          <td><span class="pill pill-free">0円</span></td>
+          <td><strong>10万円</strong></td>
+        </tr>
+        <tr>
+          <td><span class="pill">運用代行</span></td>
+          <td>W ＋ M（公式LINE・Instagramの設計・制作・配信を代行、月次の振り返りと改善）</td>
+          <td><span class="pill pill-free">0円</span></td>
+          <td><strong>18万円</strong></td>
+        </tr>
+        <tr class="recommend">
+          <td><span class="pill">フル伴走</span><span class="rec-tag">推奨</span></td>
+          <td>W ＋ M ＋ AI（サイト・LINE・SNS・問い合わせ対応を一体で運用し、毎月一緒に改善）</td>
+          <td><span class="pill pill-free">0円</span></td>
+          <td><strong>25万円</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid-2" style="margin-top:18px;">
+    <div class="card">
+      <h4 style="margin:0 0 8px;font-size:14.5px;color:var(--navy-dark);font-family:'Noto Sans JP';font-weight:700;">運用代行を含むプランの金額の根拠</h4>
+      <p style="margin:0;font-size:13.2px;color:var(--ink-soft);">運用代行は「作業の外注」ではなく、毎月の配信制作・反応の分析・打ち合わせ・修正を継続して担う業務です。同時にお引き受けする会社数を限定し、1社あたりに十分な時間を割くことを前提に金額を設定しています。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 8px;font-size:14.5px;color:var(--navy-dark);font-family:'Noto Sans JP';font-weight:700;">費用対効果の目安</h4>
+      <p style="margin:0;font-size:13.2px;color:var(--ink-soft);">3,000万円の物件1件の仲介手数料は、法定上限で税込約105万円です。フル伴走の年額300万円は、<strong>このご提案をきっかけとした新規のご成約が年3件</strong>あれば回収できる計算になります。空き家管理の継続契約や賃貸管理につながれば、回収はさらに早まります。</p>
+    </div>
+    <div class="card">
+      <h4 style="margin:0 0 8px;font-size:14.5px;color:var(--navy-dark);font-family:'Noto Sans JP';font-weight:700;">契約期間について</h4>
+      <p style="margin:0;font-size:13.2px;color:var(--ink-soft);">1年契約とさせていただいております。制作費をいただかない形をとっている以上、短期間での解約が続くと成立しないためです。逆に申し上げれば、1年間は責任を持って改善を続けるという意味でもあります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== S6 ===== -->
+<section class="sec" id="s6">
+  <div class="sec-head"><span class="sec-num">Chapter 06</span><h2>ここからの進め方</h2></div>
+  <p class="sec-sub">ステップ3までは費用が発生しません。お断りいただく場合も、その時点で終了となります。</p>
+  <div class="flow">
+    <div class="fstep"><div class="n">1</div><h4>ページをご確認</h4><p>お送りしたページをご覧いただき、ご感想をお聞かせください。「ここは違う」というご指摘こそ知りたい点です。</p><span class="cost">費用なし</span></div>
+    <div class="fstep"><div class="n">2</div><h4>情報をご提供</h4><p>電話番号・住所・免許番号・営業時間などをいただければ反映します。ご興味の段階でも構いません。</p><span class="cost">費用なし</span></div>
+    <div class="fstep"><div class="n">3</div><h4>ご要望を反映</h4><p>文言・構成・掲載内容のご要望を伺い、修正します。ここまでで判断いただければ十分です。</p><span class="cost">費用なし</span></div>
+    <div class="fstep"><div class="n">4</div><h4>公開・ご契約</h4><p>御社のドメインに接続して公開。ここから月額のご契約となり、毎月の打ち合わせと改善を重ねる運用に入ります。</p><span class="cost" style="background:var(--gold-light);color:#6b5310;">ご契約</span></div>
+  </div>
+</section>
+
+<!-- ===== S7 ===== -->
+<section class="sec" id="s7">
+  <div class="sec-head"><span class="sec-num">Chapter 07</span><h2>実績</h2></div>
+  <p class="sec-sub">学校法人のマーケティング責任者として、集客施策の設計から実行までを担当しております。</p>
+  <div class="tr-band">
+    <div class="tr-inner">
+      <div class="tr-num">
+        <div class="from">前年度 年間 180人</div>
+        <div><span class="to">230</span><span class="unit">人</span></div>
+      </div>
+      <div class="tr-text">
+        <h4>説明会参加者数：年間180人 → 年度内2回のみで230人</h4>
+        <p>ターゲットの再定義、訴求メッセージの設計、Webサイト・SNS・動画の制作、LINEを用いた申込導線と記録の自動化までを一貫して担当。年間実績を、年度途中の2回だけで上回りました。同じ設計思想を、御社の相続・空き家のご相談導線に適用いたします。</p>
+      </div>
+    </div>
+  </div>
+  <p style="font-size:12.5px;color:var(--ink-faint);margin-top:14px;">※ 法人名は守秘のため記載を控えております。詳細は面談の際に口頭にてご説明いたします。</p>
+</section>
+
+<!-- ===== S8 ===== -->
+<section class="sec" id="s8">
+  <div class="sec-head"><span class="sec-num">Chapter 08</span><h2>想定されるご質問</h2></div>
+  <div class="qa"><p class="q">なぜ制作費が0円なのですか。</p><p class="a">実物をご覧いただかないまま判断していただくのは難しいと考えているためです。資料だけでご検討いただくより、完成したページをお使いいただいた上で判断していただく方が、双方にとって無駄がありません。制作にかかるのは私の時間のみですので、先にお出しできます。</p></div>
+  <div class="qa"><p class="q">今のホームページはどうなりますか。</p><p class="a">止める必要はございません。両方を並べてご比較いただき、良いと思われた方をお選びください。併用という形も可能です。</p></div>
+  <div class="qa"><p class="q">勝手にページを作られたことに抵抗があります。</p><p class="a">ご不快に感じられた場合は申し訳ございません。一般への告知はしておらず、検索にも表示されない設定です。ご連絡いただければ即座に削除し、以後のご連絡も差し控えます。先に形にしてお見せするのが最も誠実だと考えた結果ですが、ご意向を最優先いたします。</p></div>
+  <div class="qa"><p class="q">記載されている税制の内容は正確ですか。</p><p class="a">一般的な制度の概要として記載しております。実際の適用可否は個別の要件により異なりますので、ページ上でも断定を避け「場合があります」「個別のご確認が必要です」という表現に統一しております。掲載内容は公開前に御社にご確認いただきます。</p></div>
+  <div class="qa"><p class="q">途中で解約したくなった場合は。</p><p class="a">1年契約としておりますが、まずはご契約前の無料の段階で十分にご判断ください。こちらから継続を強くお願いすることはいたしません。</p></div>
+  <div class="qa"><p class="q">連絡はどのようにすればよいですか。</p><p class="a">このメールへのご返信で結構です。お電話をご希望の場合はその旨お知らせいただければ、こちらからおかけいたします。</p></div>
+</section>
+
+<!-- ===== S9 ===== -->
+<section class="sec" id="s9" style="margin-bottom:0;">
+  <div class="sec-head"><span class="sec-num">Chapter 09</span><h2>次のステップ</h2></div>
+  <div class="note-box" style="margin-bottom:26px;">
+    <h4>お手数ですが、以下のいずれかをご返信ください</h4>
+    <ol>
+      <li><strong>ページをご覧になったご感想</strong>（良い点でも、違うと感じた点でも結構です。後者の方がありがたく存じます）</li>
+      <li><strong>反映してほしい情報</strong>（空き家管理の料金、お写真、実際のご相談事例など）</li>
+      <li><strong>一度お話ししたい</strong>とお考えの場合、ご都合のよい日時と連絡方法</li>
+      <li><strong>ご不要な場合</strong>は、その旨のみで結構です。ページを削除し、以後のご連絡は差し控えます</li>
+    </ol>
+  </div>
+  <div class="closing">
+    <h3>御社が積み重ねてこられた信頼を、<br>まだ知らない方にも届く形にしたい。</h3>
+    <p>それだけが、このご提案の目的です。ご検討のほど、何卒よろしくお願い申し上げます。</p>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  岩崎総合不動産様 個別ご提案資料 ／ 2026年9月 ／ 桂（学校法人 マーケティングリーダー）<br>
+  本資料およびお客様向けページは御社への個別提案のために作成したものであり、検索に表示されない限定URLでお届けしています。
+</footer>
+
+</body>
+</html>
